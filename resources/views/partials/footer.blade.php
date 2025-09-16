@@ -14,7 +14,7 @@
                     <h6 class="mt-3 text-white font-weight-normal">Help Center</h6>
                     <div class="footer_title_border"></div>
                     <ul class="list-unstyled footer_menu_list mb-0 mt-4">
-                        <li><a href="javascript:void(0)">Privacy Policy</a></li>
+                        <li><a href="privacy">Privacy Policy</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-2 order-2 order-lg-1">
@@ -65,7 +65,7 @@
                     <div class="text-lg-end">
                         <ul class="list-inline mb-0 fot_social mt-3">
                             <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=100064449819400" class="social-icon"><i class="mdi mdi-facebook"></i></a></li>
-                            <li class="list-inline-item"><a href="javascript:void(0)" class="social-icon"><i class="mdi mdi-linkedin"></i></a></li>
+                            <li class="list-inline-item"><a href="https://www.linkedin.com/company/magic-touch-innovation-inc/" class="social-icon"><i class="mdi mdi-linkedin"></i></a></li>
                         </ul>
                     </div>
                 </div>

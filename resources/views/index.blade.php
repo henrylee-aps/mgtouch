@@ -18,7 +18,7 @@
                         <div class="home_divider"></div>
                         <p class="home_small_title mt-4">Magic Touch ERP is designed for small business</p>
                         <div class="mt-5">
-                            <a href="javascript:void(0)" class="btn btn-custom">Explore</a>
+                            <a href="feature" class="btn btn-custom">Explore</a>
                         </div>
                     </div>
                 </div>

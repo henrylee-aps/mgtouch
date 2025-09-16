@@ -35,7 +35,7 @@
             <div class="row mt-5">
                 <div class="col-lg-6">
                     <div class="ab_page_title mt-3">
-                        <h2 class="fw-bold text-capitalize">We're small but experienced</h2>
+                        <h2 class="fw-bold text-custom">We're small but experienced</h2>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -48,7 +48,7 @@
             <div class="row mt-5">
                 <div class="col-lg-6">
                     <div class="ab_page_title mt-3">
-                        <h2 class="fw-bold text-capitalize">We understand you</h2>
+                        <h2 class="fw-bold text-custom">We understand you</h2>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -61,7 +61,7 @@
             <div class="row mt-5">
                 <div class="col-lg-6">
                     <div class="ab_page_title mt-3">
-                        <h2 class="fw-bold text-capitalize">We enable you</h2>
+                        <h2 class="fw-bold text-custom">We enable you</h2>
                     </div>
                 </div>
                 <div class="col-lg-6">
