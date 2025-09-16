@@ -21,8 +21,7 @@
                 <!-- Content -->
                 <div class="row mt-4">
                     <div class="col-lg-12">
-                        <div class="bg-custom-lighter">
-                        <div class="contact_thir_form mx-auto">
+                        <div class="contact_thir_form bg-custom-lighter mx-auto p-3 rounded">
                             <br><br>
                             <form>
                                 <div class="row">
@@ -56,7 +55,6 @@
                                 </div>
                                 <br>
                             </form>
-                        </div>
                         </div>
                     </div>
                 </div>
