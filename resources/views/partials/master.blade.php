@@ -12,7 +12,7 @@
     <title>Magic Touch - Small Business ERP</title>
 
     <!-- Site favicon -->
-    <link rel="shortcut icon" href="{{ URL::asset('assets/images/favicon2.ico') }}">
+    <link rel="shortcut icon" href="{{ URL::asset('assets/images/favicon.ico') }}">
 
     <!-- include head css -->
     @include('partials.head-css')

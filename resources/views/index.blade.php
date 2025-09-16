@@ -15,21 +15,10 @@
                     <div class="home_sec_content mt-3 text-white">
                         <!-- <p class="fst-italic first_small_lable text-custom">Since 1911</p> -->
                         <h1 class="mt-3">ERP isn't just for big business anymore!</h1>
+                        <div class="home_divider"></div>
                         <p class="home_small_title mt-4">Magic Touch ERP is designed for small business</p>
                         <div class="mt-5">
                             <a href="javascript:void(0)" class="btn btn-custom">Explore</a>
-                        </div>
-                        <div class="home_divider"></div>
-                        <div class="home_top_brand_title">
-                            <div class="align-items-center d-lg-inline-block d-sm-block">
-                                <span class="text-white-50 text-capitalize">Trusted partners:</span>
-                            </div>
-                            <a href="javascript:void(0)">
-                                <img src="{{ URL::asset('assets/images/clients/6.png') }}" alt="" class="img-fluid">
-                            </a>
-                            <a href="javascript:void(0)">
-                                <img src="{{ URL::asset('assets/images/clients/7.png') }}" alt="" class="img-fluid">
-                            </a>
                         </div>
                     </div>
                 </div>
