@@ -14,7 +14,7 @@
                     <div class="col-lg-12">
                         <div class="section_title">
                             <h1 class="fw-bold"><span></span>Contact Us</h1>
-                            <p class="text-muted mb-0 mt-2">We'd love to talk about how we can help you.</p>
+                            <p class="text-muted mb-0 mt-2">We would love to talk about how we can help you.</p>
                         </div>
                     </div>
                 </div>
