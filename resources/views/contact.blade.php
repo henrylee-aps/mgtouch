@@ -23,28 +23,46 @@
                     <div class="col-lg-12">
                         <div class="contact_thir_form bg-custom-lighter mx-auto p-3 rounded">
                             <br><br>
-                            <form>
+
+                            @if(session('success'))
+                                <div class="alert alert-warning">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
+
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+
+                            <form action="{{ route('contact.store') }}" method="POST">
+                                @csrf
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="form-group">
-                                            <input name="name" id="name" type="text" class="form-control" placeholder="Your name..." required="">
+                                            <input name="name" id="name" type="text" class="form-control" placeholder="Your name..." value="{{old('name')}}" required="">
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-group mt-2">
-                                            <input name="email" id="email" type="email" class="form-control" placeholder="Your email..."  required="">
+                                            <input name="email" id="email" type="email" class="form-control" placeholder="Your email..." value="{{ old('email') }}"  required="">
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="form-group mt-2">
-                                            <input type="text" class="form-control" id="subject" placeholder="Your Subject.."  required=""/>
+                                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Your Subject.." value="{{ old('subject') }}" required=""/>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="form-group mt-2">
-                                            <textarea name="comments" id="comments" rows="4" class="form-control" placeholder="Your message..." required=""></textarea>
+                                            <textarea name="comments" id="comments" rows="4" class="form-control" placeholder="Your message..." value="{{ old('comments') }}" required=""></textarea>
                                         </div>
                                     </div>
                                 </div>                             

@@ -27,14 +27,15 @@
                     </ul>
                     -->
                 </div>
-                <div class="col-lg-6 order-1 order-lg-2">
+                <div id="newsletter" class="col-lg-6 order-1 order-lg-2">
                     <div class="bg_footer_sub2 mx-auto rounded text-center">
                         <div class="section_title text-center text-white">
                             <h3>Be the first to know</h3>
                             <p class="mx-auto mb-0 mt-3">Join our mailing list and we'll keep you posted on when we launch (we might just send you an early bird offer too!).</p>
                         </div>
                         <div class="subcri_form mt-3">
-                            <form>
+                            <form action="{{ route('newsletter.store') }}" method="POST">
+                                @csrf
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="form-group mt-2 mb-3">
@@ -48,6 +49,17 @@
                                     </div>
                                 </div>
                             </form>
+                            @if(session('success'))
+                                <div class="alert alert-warning mt-2">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
+
+                            @if($errors->any())
+                                <div class="alert alert-danger mt-2">
+                                    {{ $errors->first('email') }}
+                                </div>
+                            @endif
                         </div>
                     </div>
                 </div>
