@@ -40,7 +40,7 @@
             <div class="row mt-5 align-items-center">
                 <div class="col-lg-6">
                     <div class="side_img_content mt-3">
-                        <img src="{{ URL::asset('assets/images/benefit_2.jpg') }}" alt="com" class="img-fluid mx-auto d-block">
+                        <img src="{{ URL::asset('assets/images/benefit_3.jpg') }}" alt="com" class="img-fluid mx-auto d-block">
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -58,7 +58,7 @@
             <div class="row mt-5 align-items-center">
                 <div class="col-lg-6 order-md-2">
                     <div class="side_img_content mt-3">
-                        <img src="{{ URL::asset('assets/images/benefit_3.jpg') }}" alt="com" class="img-fluid mx-auto d-block">
+                        <img src="{{ URL::asset('assets/images/benefit_2.jpg') }}" alt="com" class="img-fluid mx-auto d-block">
                     </div>
                 </div>
                 <div class="col-lg-6 order-md-1">
