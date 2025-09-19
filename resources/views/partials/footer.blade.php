@@ -49,19 +49,19 @@
                                     </div>
                                 </div>
                             </form>
-                            @if(session('success'))
-                                <div class="alert alert-warning mt-2">
-                                    {{ session('success') }}
-                                </div>
-                            @endif
-
-                            @if($errors->any())
-                                <div class="alert alert-danger mt-2">
-                                    {{ $errors->first('email') }}
-                                </div>
-                            @endif
                         </div>
                     </div>
+                        @if(session('success'))
+                            <div class="col-lg-10 alert alert-primary mx-auto mt-2">
+                                {{ session('success') }}                                
+                            </div>
+                        @endif
+
+                        @if($errors->any())
+                            <div class="col-lg-10 alert alert-danger mx-auto mt-2">
+                                {{ $errors->first('email') }}
+                            </div>
+                        @endif
                 </div>
             </div>
             <div class="foot_divider mt-5"></div>
