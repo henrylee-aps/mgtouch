@@ -13,17 +13,17 @@ class NewsletterController extends Controller
             'email' => 'required|email',
         ]);
 
+        $toAddress = config('mail.to');
+
         Mail::raw(
             "Email: {$request->email}\n",
-            function ($mail) use ($request) {
+            function ($mail) use ($request, $toAddress) {
                 // $mail->to(config('mail.to'))
-                    $mail->to("henrylee103@gmail.com")
+                    $mail->to($toAddress)
                     ->from($request->email)
                     ->subject("Subscription: {$request->email}");
             }
         );
-
-        $toAddress = config('mail.to');
 
         return redirect()->to(url()->previous() . '#newsletter')
                  ->with('success', 'Thank you for subscription our newsletter! A copy has been sent to ' . $toAddress);
