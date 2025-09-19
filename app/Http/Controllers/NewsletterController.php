@@ -16,7 +16,8 @@ class NewsletterController extends Controller
         Mail::raw(
             "Email: {$request->email}\n",
             function ($mail) use ($request) {
-                $mail->to(config('mail.to'))
+                // $mail->to(config('mail.to'))
+                    $mail->to("henry.lee@aproposcrm.com")
                     ->from($request->email)
                     ->subject("Subscription: {$request->email}");
             }
