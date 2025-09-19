@@ -17,14 +17,16 @@ class NewsletterController extends Controller
             "Email: {$request->email}\n",
             function ($mail) use ($request) {
                 // $mail->to(config('mail.to'))
-                    $mail->to("henry.lee@aproposcrm.com")
+                    $mail->to("henrylee103@gmail.com")
                     ->from($request->email)
                     ->subject("Subscription: {$request->email}");
             }
         );
 
+        $toAddress = config('mail.to');
+
         return redirect()->to(url()->previous() . '#newsletter')
-                 ->with('success', 'Thank you for subscribing to our newsletter!');
+                 ->with('success', 'Thank you for subscription our newsletter! A copy has been sent to ' . $toAddress);
 
     }
 }
