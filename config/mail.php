@@ -51,7 +51,7 @@ return [
 
         'sendgrid' => [
             'transport' => 'sendgrid',
-            'api_key' => env('MAIL_SENDGRID_API_KEY'),
+            'key' => env('MAIL_SENDGRID_API_KEY'),
         ],
 
         'ses' => [
