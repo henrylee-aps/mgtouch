@@ -2,6 +2,22 @@
 @section('css')
 @endsection
 
+@section('head')
+    <!-- Meta Data -->
+    <title>Contact Us | Magic Touch ERP for Small Business)</title>        
+ 
+    <!-- Page secific scripts - reCAPTCHA -->
+    <script src="https://www.google.com/recaptcha/api.js?render={{ config('captcha.sitekey') }}"></script>
+    <script>
+        $skey = "{{ config('captcha.sitekey') }}";
+        grecaptcha.ready(function() {
+            grecaptcha.execute($skey, {action: 'contact_us'}).then(function(token) {
+                document.getElementById('recaptcha_token').value = token;
+            });
+        }); 
+    </script>
+@endsection
+
 @section('content')
         <!-- Start All Cards -->
 
@@ -45,6 +61,9 @@
                             <br><br>
                             <form action="{{ route('contact.store') }}" method="POST">
                                 @csrf
+                                <!-- Google Recaptcha -->
+                                <input type="hidden" name="recaptcha_token" id="recaptcha_token">
+
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="form-group">
