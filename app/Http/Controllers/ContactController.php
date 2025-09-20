@@ -18,24 +18,20 @@ class ContactController extends Controller
         ]);
 
         // Send email (simple example)
+        $toAddress = config('mail.to');
+
         Mail::raw(
             "Name: {$request->name}\n".
             "Email: {$request->email}\n".
             "Subject: {$request->subject}\n\n".
             "Message:\n{$request->comments}",
-            function ($mail) use ($request) {
-                $mail->to(config('mail.to'))
-                    ->from($request->email, $request->name)
-                    ->subject("Contact Form: {$request->subject}");
+            function ($mail) use ($request, $toAddress) {
+                $mail->to($toAddress)
+                    ->from(config('mail.from.address'), config('mail.from.name'))
+                    ->replyTo($request->email)
+                    ->subject("New Subscription: {$request->email}");
             }
-        ); 
-
-        /*
-        Mail::raw($request->comments, function ($mail) use ($request) {
-            $mail->to('henrylee103@gmail.com') 
-                 ->from($request->email)
-                 ->subject('New Contact Form Message');
-        }); */
+        );
 
         // Redirect back with success message
         return back()->with('success', 'Thank you for contacting us. We’ll get back to you promptly!');

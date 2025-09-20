@@ -16,12 +16,12 @@ class NewsletterController extends Controller
         $toAddress = config('mail.to');
 
         Mail::raw(
-            "Email: {$request->email}\n",
+            "New newsletter subscription:\nEmail: {$request->email}",
             function ($mail) use ($request, $toAddress) {
-                // $mail->to(config('mail.to'))
-                    $mail->to($toAddress)
-                    ->from($request->email)
-                    ->subject("Subscription: {$request->email}");
+                $mail->to($toAddress)
+                    ->from(config('mail.from.address'), config('mail.from.name'))
+                    ->replyTo($request->email)
+                    ->subject("New Subscription: {$request->email}");
             }
         );
 
