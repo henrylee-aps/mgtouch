@@ -24,9 +24,8 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         $this->app->make(MailManager::class)->extend('sendgrid', function ($config) {
-            return new Mailer(
-                SendgridApiTransport::fromApiKey($config['key'])
-            );
+            $transport = new SendgridApiTransport($config['key']);  // use constructor
+            return new Mailer($transport);
         });
 
     }
