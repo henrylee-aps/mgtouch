@@ -16,6 +16,7 @@
 
     <!-- include head css -->
     @include('partials.head-css')
+    @yield('head')
     @yield('css')
     @include('partials.header')
 
