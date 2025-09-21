@@ -47,6 +47,7 @@ class ContactController extends Controller
         $toAddress = config('mail.to');
 
         Mail::raw(
+            "Contact Us Web Form:\n".
             "Name: {$request->name}\n".
             "Email: {$request->email}\n".
             "Subject: {$request->subject}\n\n".
@@ -55,7 +56,7 @@ class ContactController extends Controller
                 $mail->to($toAddress)
                     ->from(config('mail.from.address'), config('mail.from.name'))
                     ->replyTo($request->email)
-                    ->subject("New Subscription: {$request->email}");
+                    ->subject("Contact Us Web Form from: {$request->email}");
             }
         );
 
