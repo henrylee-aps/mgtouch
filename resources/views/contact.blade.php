@@ -34,26 +34,24 @@
 
                 <!-- Content -->
                 <div class="row mt-4">
-                    <!-- message -->  
-                       
-                    @if(session('success'))
-                        <div class="col-lg-3"></div>
-                        <div class="col-lg-6 alert alert-primary">
-                            {{ session('success') }}
-                        </div>
-                    @endif
-
-                    @if ($errors->any())
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
                     <!-- input form -->
                     <div class="col-lg-12">
+                        <!-- message -->                         
+                        @if(session('success'))
+                            <div class="alert alert-primary contact_thir_form mx-auto p-3">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+                        @if ($errors->any())
+                            <div class="alert alert-danger contact_thir_form mx-auto p-3">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+
                         <div class="contact_thir_form bg-custom-lighter mx-auto p-3 rounded">
                             <br><br>
                             <form action="{{ route('contact.store') }}" method="POST">
