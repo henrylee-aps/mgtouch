@@ -3,13 +3,10 @@
 @endsection
 
 @section('head')
-    <!-- Meta Data -->
-    <title>Contact Us | Magic Touch ERP for Small Business)</title>        
- 
     <!-- Page secific scripts - reCAPTCHA -->
-    <script src="https://www.google.com/recaptcha/api.js?render={{ config('captcha.sitekey') }}"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render={{ config('captcha.site_key') }}"></script>
     <script>
-        $skey = "{{ config('captcha.sitekey') }}";
+        $skey = "{{ config('captcha.site_key') }}";
         grecaptcha.ready(function() {
             grecaptcha.execute($skey, {action: 'contact_us'}).then(function(token) {
                 document.getElementById('recaptcha_token').value = token;

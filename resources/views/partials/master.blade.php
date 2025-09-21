@@ -14,9 +14,11 @@
     <!-- Site favicon -->
     <link rel="shortcut icon" href="{{ URL::asset('assets/images/favicon.ico') }}">
 
+    <!-- include page specific head -->
+    @yield('head')
+    
     <!-- include head css -->
     @include('partials.head-css')
-    @yield('head')
     @yield('css')
     @include('partials.header')
 
